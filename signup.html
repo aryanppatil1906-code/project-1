@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up</title>
+    <style>
+        body{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .signupcard {
+           width: 350px;
+  background: rgb(255, 255, 255);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  gap: 10px;
+        } 
+        .signupcard h1{
+             text-align: center;
+             margin-bottom: 20px;}
+        .signupcard label{
+            display: block;
+            font-size: larger;
+            font-weight: 700 px;
+            margin-bottom: 10px;
+
+        }
+        .signupcard input{
+           width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  margin-bottom: 20px;
+        }
+        .signupcard button{
+            width: 100%;
+  padding: 12px;
+  border: none;
+  background: #107a31;
+  color: white;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+        }
+
+
+    </style>
+</head>
+<body>
+    <form class="signupcard">
+        <h1 class="heading">sign in</h1>
+        <div ><label>Name</label>
+        <input type="text"placeholder="enter name"  ></div>
+        <div ><label>Mobile no</label>
+        <input type="text"placeholder="enter mobile no"></div>
+       <div><label>Email</label>
+        <input type="text"placeholder="enter email" name="email"></div>
+        <div><label>Password</label>
+        <input type="password"placeholder="enter password" name="password"></div>
+         <div><label>Confirm Password</label>
+        <input type="password"placeholder="enter password"></div>
+        <button type="submit">Submit</button>
+        
+    </form>
+  <script type="module" src="app.js"></script>  
+</body>
+</html>

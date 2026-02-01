@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            min-height: 100vh;
+            display :flex;
+            justify-content: center;
+            align-items: center;
+            background:#58585800 ;
+        }
+        .login-card {
+  width: 500px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.222);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  gap: 10px;
+}
+.login-card h1 {
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+
+.input-group {
+  margin-bottom: 15px;
+
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 300 px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #107a31;
+  color: white;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <form class="loginForm">
+  <h1>Login</h1>
+
+<div class="input-group  ">
+  <label>Email</label>
+  <input type="email" name="email" placeholder="Enter email" required>
+   </div>
+   <div class="input-group  ">
+  <label>Password</label>
+  <input type="password" name="password" placeholder="Enter password" required>
+   </div>
+   <div class="input-group  ">
+  <button type="submit" class="login-btn ">Login</button>
+  <a href="http://127.0.0.1:5500/signup.html">Please sign in if new here</a>
+   </div>
+</form>
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

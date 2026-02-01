@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+              flex-direction: column;
+              min-height: 100vh;
+        }
+        .form{
+             display: flex;
+            justify-content: center;
+            align-items: center;
+              flex-direction: column;
+        max-height: 80%;
+            
+              width: 50%;
+  background: rgb(255, 255, 255);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  gap: 10px;
+              
+        }
+        .form h1{
+            text-align: center;
+  margin-bottom: 20px;
+
+        }
+        .form label{
+            display: block;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 300 px;
+        }
+        .form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+.form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+.form textarea{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  height: 100px;
+}
+.create{
+  width: 55%;
+  padding: 12px;
+  border: none;
+  background: #107a31;
+  color: white;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <h1>Campaign Form</h1>
+    <form class="form">
+        <label>Name</label>
+        <input type="text" name="title" placeholder="Campaign Title"required>
+        <label>Type</label>
+       
+        <select name="type">
+          <option name="Medical" value="Medical">Medical</option>
+           <option name="Startup" value="Startup">Startup</option>
+            <option name="Preservation" value="Preservation">Preservation</option>
+             <option name="Education" value="Education">Education</option>
+              <option name="Other" value="Other">Other</option>
+        </select>
+       
+        <label>Description</label>
+        <textarea name="description" placeholder="Description"required></textarea>
+        <label>Goal amount</label>
+        <input type="number" name="goal"placeholder="Goal amount" required>
+        
+
+        <label>Deadline</label>
+        <input type="date" name="deadline">
+       <label>Images</label>
+        <input type="file">
+         <label>Wallet Address</label>
+        <input type="text" name="walletAddress" id="walletAddress">
+        <p id="walletDisplay"></p>
+        <button class="create" type="submit">Create Campaign</button>
+    </form>
+  
+    <script type="module" src="app.js"></script>
+</body>
+</html>

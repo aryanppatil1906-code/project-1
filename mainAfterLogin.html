@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeTogether - Crowdfunding Platform</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+       body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: #222222;
+    background-size: cover;
+    background-position: center;
+}
+        /*navbar*/
+        .navbar {
+            width: 100%;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            border-bottom: 2px solid #eef2ff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a3cff;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #1a3cff;
+            font-weight: 500;
+        }
+
+        .nav-buttons button {
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: 1px solid #1a3cff;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .logoutBtn {
+            background: transparent;
+            color: #1a3cff;
+        }
+         .history {
+            background: transparent;
+            color: #1a3cff;
+        }
+     .profile {
+            background: transparent;
+            color: #1a3cff;
+        }
+
+        .signup-btn {
+            background: #1a3cff;
+            color: white;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 5px;
+            color: #1a3cff;
+        }
+
+        .hero h2 {
+            margin-top: 5px;
+            font-size: 24px;
+        }
+
+        .hero-img {
+            width: 100%;
+            max-width: 1000px;
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 10px;
+        }
+
+        .hero button {
+            padding: 12px 25px;
+            border-radius: 25px;
+            background: #1a3cff;
+            color: white;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            
+            justify-content: center;
+            align-content: center;
+
+        }
+
+        /* SEARCH SECTION */
+        .search-section {
+            text-align: center;
+            max-width: 700px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .search-section input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid #ccd3ff;
+            font-size: 16px;
+        }
+
+        .categories {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .categories button {
+            background: white;
+            border: 1px solid #1a3cff;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            color: #1a3cff;
+            font-weight: 600;
+        }
+
+        /* FEATURED CAMPAIGNS */
+        .featured-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 10px;
+        }
+
+        .featured-campaigns {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .campaign-card {
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .campaign-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .campaign-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            background: #eee;
+            height: 8px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .progress {
+            height: 100%;
+            background: #1a3cff;
+            border-radius: 5px;
+        }
+
+        .donate-btn {
+            width: 100%;
+            padding: 10px;
+            background: #1a3cff;
+            border: none;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        /* STATISTICS */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 40px 20px;
+            background: #1a3cff;
+            color: white;
+        }
+
+        .stat-box {
+            text-align: center;
+        }
+
+        .stat-box h1 {
+            font-size: 36px;
+        }
+
+        /* TESTIMONIALS */
+        .testimonials {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #0d1b6b;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">WeTogether</div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="campaignList.html">Campaigns</a></li>
+            <li><a href="#">How it works</a></li>
+            <li><a href="#">About</a></li></ul>
+            <div class="nav-buttons">
+                  <button class="history" >Check Donation History</button>
+                 <button class="profile" >profile</button>
+            <button class="logoutBtn">Logout</button>
+    
+        </div>
+        </div>
+        
+    </nav>
+
+    <!-- HERO SECTION -->
+    <div class="hero">
+        <h1>WeTogether</h1>
+        <h2>Raise funds with trust and transparency</h2>
+        <img class="hero-img" src="https://worldbusinessoutlook.com/wp-content/uploads/2023/08/An-In-Depth-Look-at-the-Global-Crowdfunding-Platform-Landscape-Everything-You-Should-Know.png">
+        <button id = "start-campaign">Start a Fundraiser</button>
+    </div>
+
+    <!-- SEARCH SECTION -->
+     <a href="campaignList.html">
+    <div class="search-section">
+        <h2>Search Campaign</h2>
+        <input type="text" class="searchInput"placeholder="Search by name, title, location or keywords">
+
+        <div class="categories">
+            <button>Medical</button>
+            <button>Startup</button>
+            <button>Preservation</button>
+            <button>Education</button>
+            <button>Other</button>
+        </div>
+    </div>
+     </a>
+
+    <!-- FEATURED CAMPAIGNS -->
+    <div class="featured-section">
+        <h2>Featured Campaigns</h2>
+
+        <div class="featured-campaigns">
+
+            <div class="campaign-card">
+                <img src="https://i.imgur.com/mj5Zq0G.jpeg" class="campaign-img">
+                <h3>Help Rahul Fight Cancer</h3>
+                <p>Rahul needs urgent treatment for leukemia.</p>
+                <div class="progress-bar"><div class="progress" style="width: 65%;"></div></div>
+                <p><strong>₹3,25,000 raised of ₹5,00,000</strong></p>
+                <button class="donate-btn">Donate Now</button>
+            </div>
+
+            <div class="campaign-card">
+                <img src="https://i.imgur.com/4Y0O9Vs.jpeg" class="campaign-img">
+                <h3>Support EcoBottle Startup</h3>
+                <p>Eco-friendly biodegradable bottles by students.</p>
+                <div class="progress-bar"><div class="progress" style="width: 40%;"></div></div>
+                <p><strong>₹2,00,000 raised of ₹5,00,000</strong></p>
+                <button class="donate-btn">Donate Now</button>
+            </div>
+
+            <div class="campaign-card">
+                <img src="https://i.imgur.com/t9G8wZa.jpeg" class="campaign-img">
+                <h3>Save Ancient Fort</h3>
+                <p>Help preserve India's historic heritage fort.</p>
+                <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+                <p><strong>₹7,50,000 raised of ₹10,00,000</strong></p>
+                <button class="donate-btn">Donate Now</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- STATISTICS -->
+    <div class="stats">
+        <div class="stat-box">
+            <h1>100M+</h1>
+            <p>Funds Raised</p>
+        </div>
+        <div class="stat-box">
+            <h1>20,000+</h1>
+            <p>Successful Campaigns</p>
+        </div>
+        <div class="stat-box">
+            <h1>5,00,000+</h1>
+            <p>Donors</p>
+        </div>
+    </div>
+
+    <!-- TESTIMONIALS -->
+    <div class="testimonials">
+        <h2>What People Say</h2>
+
+        <div class="testimonial">
+            <p>"This platform helped me raise funds for my father's surgery. Forever grateful!"</p>
+            <strong>- Ayesha</strong>
+        </div>
+
+        <div class="testimonial">
+            <p>"Amazing transparency and fast support. Highly recommend!"</p>
+            <strong>- Rohit</strong>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <p>© 2025 WeTogether. All rights reserved.</p>
+    </div>
+<script src="app.js" type="module"></script>
+</body>
+</html>
