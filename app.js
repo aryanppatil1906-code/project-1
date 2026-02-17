@@ -36,14 +36,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);
-const loginbtn=document.querySelector(".login-Btn");
-const signupbtn=document.querySelector(".signup-Btn");
-loginbtn.addEventListener("click",()=>{
-  window.location.href="login.html";
-})
-signupbtn.addEventListener("click",()=>{
-  window.location.href="signup.html";
-})
+
 /*****************************************************
  *  WALLET STATE
  *****************************************************/
